@@ -1,0 +1,1330 @@
+:root {
+ 
+  /* Gradient-based admin palette */
+  --primary: #14b8a6;       /* Teal */
+  --secondary: #6366f1;     /* Indigo */
+  --accent: #22d3ee;       /* Cyan highlight */
+  --warm: #a3e635;         /* Lime success */
+  --bg: #f8fafc;           /* Soft neutral background */
+  --card: #ffffff;
+  --text: #0f172a;
+  --radius: 12px;
+  --maxw: 1200px;
+}
+
+
+/* -------------------------
+   Base
+------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------------
+   Layout Container
+------------------------- */
+.container {
+  width: 92%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Header
+------------------------- */
+header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.04);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+nav a {
+  margin-left: 16px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* -------------------------
+   Hero Section
+------------------------- */
+.hero {
+  background: linear-gradient(135deg, #e6f2ff, #fff8e6);
+  padding: 70px 20px;
+  text-align: center;
+  /* height: 100px; */
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #05204b;
+  margin-bottom: 10px;
+  letter-spacing: 0.6px;
+}
+
+.hero p {
+  max-width: 820px;
+  margin: 0 auto 22px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* -------------------------
+   Buttons
+------------------------- */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.25s ease;
+}
+
+.btn.primary {
+  background: var(--warm);
+  color: #000;
+  margin-right: 10px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  color: #05204b;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.btn.primary,
+.order-btn {
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.35);
+}
+
+
+/* -------------------------
+   How NoteEase Works
+------------------------- */
+
+.process-section {
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: #fff;
+  padding: 56px 24px;
+  margin: 32px 0;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* Heading */
+.process-section h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.process-desc {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 820px;
+  margin: 0 auto 34px;
+  line-height: 1.6;
+}
+
+/* Steps Grid */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Step Card */
+.process-step {
+  background: var(--card);
+  color: var(--text);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+}
+
+/* Step Number */
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* Step Title */
+.process-step h3 {
+  font-size: 1.05rem;
+  color: #05204b;
+  margin-bottom: 6px;
+}
+
+/* Step Text */
+.process-step p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+
+/* -------------------------
+   Writer CTA
+------------------------- */
+.writer-cta {
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+.writer-cta .writer-btn {
+  background: #fff;
+  color: #036;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.writer-cta .writer-btn:hover,
+.writer-cta .writer-btn:focus {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* -------------------------
+   Section Defaults
+------------------------- */
+section {
+  padding: 56px 20px;
+}
+
+section h2 {
+  text-align: left;
+  color: #03204a;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+section p {
+  text-align: left;
+  color: #374151;
+  margin-bottom: 18px;
+  max-width: 860px;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   Fullwidth Cards Grid
+------------------------- */
+.cards.fullwidth {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px 5%;
+  background: #fff;
+}
+
+.cards.fullwidth .card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cards.fullwidth .card:hover,
+.cards.fullwidth .card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(12, 20, 50, 0.08);
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.cards.fullwidth .card i {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.cards.fullwidth .card h3 {
+  color: #05204b;
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+
+.cards.fullwidth .card p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  flex: 1;
+}
+
+/* -------------------------
+   Promise Cards
+------------------------- */
+.promise-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+/* -------------------------
+   Contact Card
+------------------------- */
+.contact-card {
+  max-width: 700px;
+  margin: 24px auto 0;
+  background: var(--card);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  font-size: 15px;
+  width: 100%;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+.contact-card button {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #e6eef7;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-card button:hover,
+.contact-card button:focus {
+  background: #1e40af;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* =========================
+   ORDER PAGE ONLY
+========================= */
+
+/* Order Section */
+.order-section {
+  padding: 56px 20px;
+  background: linear-gradient(135deg, #fff0f4, #fdf6f0);
+}
+
+/* Order Heading */
+.order-section h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.order-section p {
+  color: #475569;
+  max-width: 760px;
+  margin-bottom: 26px;
+}
+
+/* Order Form Card */
+.order-form {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px rgba(255, 77, 109, 0.15);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Form Groups */
+.order-form .form-group {
+  margin-bottom: 18px;
+}
+
+.order-form label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #05204b;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.order-form textarea {
+  resize: vertical;
+}
+
+/* Focus State */
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.25);
+  outline: none;
+}
+
+/* Submit Button */
+.order-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-btn:hover,
+.order-btn:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 32px rgba(255, 77, 109, 0.35);
+  outline: none;
+}
+
+/* Trust Text */
+.form-trust {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  margin: 16px 0 6px;
+}
+
+/* Success Message */
+.success-msg {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  animation: fadeIn 0.4s ease;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  .order-form {
+    padding: 22px;
+  }
+
+  .order-section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* -------------------------
+   Footer
+------------------------- */
+footer {
+  background: linear-gradient(90deg, var(--primary), #2b6be6);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--warm);
+  outline: none;
+}
+
+/* -------------------------
+   Social Floating Buttons
+------------------------- */
+.social-floating {
+  position: fixed;
+  right: 14px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.social-floating a {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-floating a:hover,
+.social-floating a:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+/* -------------------------
+   Back to Top Button
+------------------------- */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 200px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#backToTop.show {
+  display: block;
+}
+
+#backToTop:hover,
+#backToTop:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  outline: none;
+}
+
+/* -------------------------
+   Universal Card Boxes
+------------------------- */
+.step, .why-card, .promise-card {
+  background: var(--card);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+
+.step:hover, .why-card:hover, .promise-card:hover,
+.step:focus-within, .why-card:focus-within, .promise-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  border-color: rgba(37,99,235,0.25);
+}
+
+.step i, .why-card i, .promise-card i {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.step h3, .why-card h4, .promise-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #05204b;
+  margin-bottom: 8px;
+}
+
+.step p, .why-card p, .promise-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.steps, .why-grid, .promise-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* -------------------------
+   Order Form Simplified
+------------------------- */
+.order-simple {
+  padding: 3rem 1rem;
+  background: var(--bg);
+}
+
+.order-box {
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.order-box h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* Buttons inside order-box */
+.order-box .btn {
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.order-box .btn:hover,
+.order-box .btn:focus {
+  background: #1e4ed9;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* -------------------------
+   Writer Profiles Grid
+------------------------- */
+.writer-profiles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.writer {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writer:hover,
+.writer:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.writer i {
+  font-size: 3rem;
+  color: #4a90e2;
+  margin-bottom: 1rem;
+}
+
+.writer h3 {
+  margin: 0.5rem 0;
+}
+
+.writer p {
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ====== Become a Writer Form ====== */
+.writer-apply-section {
+  max-width: 700px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.writer-apply-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.writer-desc {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.writer-form {
+  text-align: left;
+}
+
+.writer-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.writer-form .form-group label {
+  color: #333;
+}
+
+.writer-form .form-group input,
+.writer-form .form-group textarea {
+  border: 1.5px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writer-form .form-group input:focus,
+.writer-form .form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px rgba(37,99,235,0.25);
+}
+
+.writer-btn {
+  display: block;
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.writer-btn:hover,
+.writer-btn:focus {
+  background: #1e40af;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* -------------------------
+   Pricing Tiers
+------------------------- */
+.pricing-tiers .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tier {
+  background: var(--card);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: all 0.25s ease;
+}
+
+.tier i {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.tier h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #05204b;
+}
+
+.tier p {
+  color: #475569;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.tier .btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.tier:hover,
+.tier:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  border-color: rgba(37,99,235,0.2);
+}
+
+/* -------------------------
+   Promotions / Offers
+--------------------------- */
+.promotions {
+  background: #fdf6f0; /* matching main bg */
+  padding: 30px 0;
+  text-align: center;
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+
+.promotions .promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.promotions .promo-banner i {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+/* -------------------------
+   FAQ Section
+--------------------------- */
+.faq {
+  padding: 50px 0;
+  background: #fdf6f0; /* matching main bg */
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.faq-item {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* -------------------------
+   Statistics / Counter Section
+--------------------------- */
+.stats {
+  background: #fdf6f0; /* matching main bg */
+  padding: 60px 0;
+}
+
+.stats-flex {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats .stat {
+  background: var(--card);
+  padding: 30px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  flex: 1 1 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stats .stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.stats .stat i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.stats .stat h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.stats .stat p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* -------------------------
+   Secure Payment / Guarantee Section
+--------------------------- */
+.guarantee {
+  background: #fdf6f0; /* matching main bg */
+  padding: 50px 0;
+}
+
+.guarantee-flex {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.guarantee-item {
+  background: var(--card);
+  padding: 25px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  flex: 1 1 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guarantee-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.guarantee-item p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.guarantee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+/* -------------------------
+   Form #orderForm
+------------------------- */
+form#orderForm {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form#orderForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+form#orderForm input,
+form#orderForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+form#orderForm input:focus,
+form#orderForm textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+form#orderForm .btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+form#orderForm .btn:hover,
+form#orderForm .btn:focus {
+  background: #0056d2;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.success-msg {
+  text-align: center;
+  font-size: 16px;
+  color: green;
+  margin-top: 15px;
+  font-weight: 600;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------
+   Responsive Adjustments
+------------------------- */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 1.6rem; }
+  .step, .card { width: auto; }
+}
+
+@media (max-width: 768px) {
+  header .container { flex-direction: column; gap: 10px; }
+  nav a { margin: 6px; }
+  .hero { padding: 44px 12px; }
+  .hero h1 { font-size: 1.5rem; }
+  .btn { width: 100%; margin: 8px 0; display: block; }
+  .cards.fullwidth { grid-template-columns: 1fr; padding: 24px 12px; }
+  .contact-card, .order-box { width: 94%; padding: 16px; }
+}
+
+@media (min-width: 769px) {
+  .step, .why-card, .promise-card { flex: 1 1 240px; }
+}
+
+@media (max-width: 480px) {
+  .order-box { padding: 1.5rem; }
+  .order-box h3 { font-size: 1.2rem; }
+  .hero h2 { font-size: 1.4rem; }
+}
+
+/* -------------------------
+   Universal Transitions
+------------------------- */
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+/* -------------------------
+   Smooth Fade-in for Sections
+------------------------- */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------
+   Card Animations
+------------------------- */
+.cards.fullwidth .card,
+.step, .why-card, .promise-card,
+.writer, .tier {
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeUpCard 0.6s forwards;
+}
+
+.cards.fullwidth .card:nth-child(1) { animation-delay: 0.2s; }
+.cards.fullwidth .card:nth-child(2) { animation-delay: 0.4s; }
+.cards.fullwidth .card:nth-child(3) { animation-delay: 0.6s; }
+/* repeat for more cards if needed */
+
+@keyframes fadeUpCard {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cards.fullwidth .card:hover,
+.step:hover, .why-card:hover, .promise-card:hover,
+.writer:hover, .tier:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* -------------------------
+   Buttons Hover Animation
+------------------------- */
+.btn,
+.writer-btn,
+.order-box .btn,
+.contact-card button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover,
+.writer-btn:hover,
+.order-box .btn:hover,
+.contact-card button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* -------------------------
+   Floating Social Icons Animation
+------------------------- */
+.social-floating a {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* -------------------------
+   Back-to-Top Smooth Appear
+------------------------- */
+#backToTop {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#backToTop.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------------
+   Link Underline Slide Animation
+------------------------- */
+nav a, .footer-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::after,
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after,
+.footer-links a:hover::after,
+.footer-links a:focus::after {
+  width: 100%;
+}
+
+/* -------------------------
+   Smooth Text Fade for Hero
+------------------------- */
+.hero h1, .hero p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+
+/* -------------------------
+   Smooth Writer Form Fade
+------------------------- */
+.writer-apply-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.4s;
+}
+
+/* -------------------------
+   Tier Cards Animation Delay
+------------------------- */
+.tier:nth-child(1) { animation-delay: 0.2s; }
+.tier:nth-child(2) { animation-delay: 0.4s; }
+.tier:nth-child(3) { animation-delay: 0.6s; }
+
+/* -------------------------
+   Order Form Animation
+------------------------- */
+form#orderForm {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.5s;
+}
+
+.social-floating a {
+  text-decoration: none;
+}

@@ -1,0 +1,127 @@
+/* ================= PREMIUM SPACING ================= */
+.premium-spacing{
+padding:80px 0;
+}
+
+/* ================= GRADIENT HERO ================= */
+.hero-gradient{
+background:linear-gradient(135deg,#6a5cff,#9c7bff,#ff7ad9);
+color:#fff;
+text-align:center;
+padding:80px 0;
+}
+
+/* ================= MODERN DIVIDER ================= */
+.section-divider{
+height:60px;
+background:linear-gradient(to bottom,#ffffff 0%,#f4f6ff 100%);
+clip-path:polygon(0 0,100% 100%,0 100%);
+}
+
+/* ================= GLASS CONTACT CARD ================= */
+.glass-card{
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(15px);
+border-radius:16px;
+padding:30px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.glass-card:hover{
+transform:translateY(-6px);
+}
+
+/* ================= GRID ================= */
+.contact-grid{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* ================= FLOATING LABEL INPUT ================= */
+.input-group{
+position:relative;
+margin-bottom:25px;
+}
+
+.input-group input,
+.input-group textarea{
+width:100%;
+border:none;
+border-bottom:2px solid #ccc;
+padding:10px 0;
+background:transparent;
+outline:none;
+font-size:15px;
+}
+
+.input-group label{
+position:absolute;
+left:0;
+top:10px;
+color:#777;
+transition:0.3s;
+pointer-events:none;
+}
+
+/* Animated underline */
+.input-group input:focus,
+.input-group textarea:focus{
+border-bottom:2px solid #7b5cff;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label{
+top:-10px;
+font-size:12px;
+color:#7b5cff;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+background:linear-gradient(135deg,#7b5cff,#ff7ad9);
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.float-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:20px;
+background:#25d366;
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+z-index:999;
+}
+
+.insta-btn{
+bottom:160px;
+background:linear-gradient(135deg,#fd1d1d,#833ab4);
+}
+
+.call-btn{
+bottom:90px;
+background:linear-gradient(135deg,#00c853,#69f0ae);
+}

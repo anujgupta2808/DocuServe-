@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="logo.png"  height type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>DocuServe | Smart Document Services</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ✅ Premium Success Toast */
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 14px 18px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-family: Poppins;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: 0.4s ease;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Button Loading Effect */
+    .order-btn.loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>DocuServe | Smart Document Services</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="process-section">
+    <div class="container">
+      <h2>How DocuServe Works</h2>
+      <p class="process-desc">
+        DocuServe uses a streamlined process to handle document conversion, formatting, and data analysis efficiently —
+        ensuring quality results with clear communication at every step..
+      </p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <h3>Submit Your Request
+          </h3>
+          <p>
+            Fill out the order form by selecting your required service and uploading your file with clear instructions.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <h3>Order Confirmation</h3>
+          <p>
+            Once your request is received, our team reviews the details and confirms everything via email or WhatsApp.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <h3>File Processing Begins</h3>
+          <p>Your document is handled by experienced professionals using accurate formatting and data-safe methods.</p>
+        </div>
+
+        <div class="process-step">
+          <span class="step-number">4</span>
+          <h3>Quality Check & Review</h3>
+          <p>Before delivery, we carefully verify formatting, structure, and accuracy to ensure premium results.</p>
+        </div>
+
+        <div class="process-step">
+          <span class="step-number">5</span>
+          <h3>Fast & Secure Delivery</h3>
+          <p>Your completed file is delivered on time through Gmail or your preferred contact method.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- form -->
+  <section class="order-section">
+    <div class="container">
+      <h2>Request a Service</h2>
+
+      <form id="orderForm" class="order-form" enctype="multipart/form-data">
+
+        <label>Name</label>
+        <input type="text" id="studentName" name="name" required>
+
+        <label>Email</label>
+        <input type="email" id="studentEmail" name="email" required>
+
+        <label>Service Type</label>
+        <select id="subject" name="service" required>
+          <option value="">Select Service</option>
+          <option>PDF to Word</option>
+          <option>PDF to Excel</option>
+          <option>Excel Data Analysis</option>
+        </select>
+        <br><br>
+        <label>Instructions</label>
+        <textarea id="instructions" name="instructions" placeholder="Any special requirement"></textarea>
+        <label>Note: Please attach your file before sending the message via Email or WhatsApp.</label>
+        <button class="order-btn" type="submit">
+          <i class="fa-solid fa-paper-plane"></i> Submit Request
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FLOATING SOCIAL BUTTONS ================= -->
+  <div class="social-floating">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" class="float-btn insta-btn" title="Instagram"
+      style="background-color: #ba3a73;">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:+918779747746" class="float-btn call-btn" title="Call Now" style="background-color: #25d366;">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/918779747746" target="_blank" class="float-btn" title="WhatsApp"
+      style="background-color:#25d366;">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+  </div>
+
+
+  <footer>
+    <div class="container footer-flex">
+      <p>&#169; 2026 DocuServe — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ✅ Success Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      // Get form values
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const service = document.getElementById("subject").value;
+      const instructions = document.getElementById("instructions").value;
+
+      // 🔹 Your email + WhatsApp number
+      const adminEmail = "anujgupta26610812@gmail.com";
+      const whatsappNumber = "918779747746"; // country code + number
+
+      // Create message text
+      const message =
+        `📄 *New DocuServe Order Request*
+
+👤 Name: ${name}
+📧 Email: ${email}
+🛠 Service: ${service}
+
+📝 Instructions:
+${instructions}`;
+
+      // ---------- EMAIL LINK ----------
+      const subject = encodeURIComponent(`New Service Request from ${name}`);
+      const body = encodeURIComponent(message);
+      const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+
+      // ---------- WHATSAPP LINK ----------
+      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+      // ✅ Open WhatsApp in new tab
+      window.open(whatsappLink, "_blank");
+
+      // ✅ Open Email App
+      window.location.href = mailtoLink;
+
+      // ✅ Reset form after action
+      this.reset();
+
+    });
+  </script>
+
+
+</body>
+
+</html>
