@@ -115,7 +115,7 @@
     <div class="container">
       <h2>Request a Service</h2>
 
-      <form id="orderForm" class="order-form" action="submit_order.php" method="POST" enctype="multipart/form-data">
+      <form id="orderForm" class="order-form" enctype="multipart/form-data">
 
         <label>Name</label>
         <input type="text" id="studentName" name="name" required>
@@ -176,45 +176,29 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    document.getElementById("orderForm").addEventListener("submit", async function (e) {
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const service = formData.get('service');
-      const instructions = formData.get('instructions');
+      const name = document.getElementById("studentName").value;
+      const email = document.getElementById("studentEmail").value;
+      const service = document.getElementById("subject").value;
+      const instructions = document.getElementById("instructions").value;
 
-      try {
-        const response = await fetch('submit_order.php', {
-          method: 'POST',
-          body: formData
-        });
+      const adminEmail = "anujgupta26610812@gmail.com";
+      const whatsappNumber = "918779747746";
 
-        const result = await response.json();
+      const message = `📄 *New DocuServe Order Request*\n\n👤 Name: ${name}\n📧 Email: ${email}\n🛠 Service: ${service}\n\n📝 Instructions:\n${instructions}`;
 
-        if (result.success) {
-          const adminEmail = "anujgupta26610812@gmail.com";
-          const whatsappNumber = "918779747746";
+      const subject = encodeURIComponent(`New Service Request from ${name}`);
+      const body = encodeURIComponent(message);
+      const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-          const message = `📄 *New DocuServe Order Request*\n\n👤 Name: ${name}\n📧 Email: ${email}\n🛠 Service: ${service}\n\n📝 Instructions:\n${instructions}`;
+      window.open(whatsappLink, "_blank");
+      window.location.href = mailtoLink;
 
-          const subject = encodeURIComponent(`New Service Request from ${name}`);
-          const body = encodeURIComponent(message);
-          const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
-          const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-          window.open(whatsappLink, "_blank");
-          window.location.href = mailtoLink;
-
-          this.reset();
-          alert('✅ Order saved to database!');
-        } else {
-          alert('❌ Error: ' + result.message);
-        }
-      } catch (error) {
-        alert('❌ Error submitting order: ' + error.message);
-      }
+      this.reset();
+      alert('✅ Request submitted! Check your email and WhatsApp.');
     });
   </script>
 
