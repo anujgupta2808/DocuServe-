@@ -1,4 +1,10 @@
+const express = require('express');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
+const app = express();
+
+app.use(cors());
+app.use(express.json());
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
@@ -7,13 +13,13 @@ app.post('/api/contact', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'anujgupta26610812@gmail.com',
-      pass: 'YOUR_16_CHARACTER_APP_PASSWORD' // NOT your regular password
+      pass: 'YOUR_16_CHARACTER_APP_PASSWORD'
     }
   });
 
   const mailOptions = {
-    from: email, // The user's email
-    to: 'anujgupta26610812@gmail.com', // Your email
+    from: email,
+    to: 'anujgupta26610812@gmail.com',
     subject: `New Contact Form Submission from ${name}`,
     text: `You have a new message:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
@@ -25,3 +31,5 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ message: "Failed to send email." });
   }
 });
+
+app.listen(3000, () => console.log("🚀 Server running on http://localhost:3000"));
