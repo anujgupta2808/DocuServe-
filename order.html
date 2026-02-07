@@ -2,13 +2,17 @@
 <html lang="en">
 
 <head>
-  <!-- <link rel="icon" href="logo.png"  height type="image/x-icon"> -->
-  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DocuServe | Smart Document Services</title>
+  <meta name="description" content="Request document conversion services - PDF to Word, PDF to Excel, and Excel data analysis with DocuServe." />
 
+  <!-- Google Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
 
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -50,7 +54,7 @@
 
   <header>
     <div class="container">
-      <h1>DocuServe | Smart Document Services</h1>
+      <a href="index.html"><img src="docuserve-logo.svg" alt="DocuServe Logo" class="header-logo"></a>
       <nav>
         <a href="index.html">Home</a>
         <a href="order.html" class="active">Order</a>
@@ -111,7 +115,7 @@
     <div class="container">
       <h2>Request a Service</h2>
 
-      <form id="orderForm" class="order-form" enctype="multipart/form-data">
+      <form id="orderForm" class="order-form" action="submit_order.php" method="POST" enctype="multipart/form-data">
 
         <label>Name</label>
         <input type="text" id="studentName" name="name" required>
@@ -170,54 +174,51 @@
   <!-- ✅ Success Toast -->
   <div id="toast" class="toast"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    document.getElementById("orderForm").addEventListener("submit", function (e) {
-
+    document.getElementById("orderForm").addEventListener("submit", async function (e) {
       e.preventDefault();
 
-      // Get form values
-      const name = document.getElementById("studentName").value;
-      const email = document.getElementById("studentEmail").value;
-      const service = document.getElementById("subject").value;
-      const instructions = document.getElementById("instructions").value;
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const service = formData.get('service');
+      const instructions = formData.get('instructions');
 
-      // 🔹 Your email + WhatsApp number
-      const adminEmail = "anujgupta26610812@gmail.com";
-      const whatsappNumber = "918779747746"; // country code + number
+      try {
+        const response = await fetch('submit_order.php', {
+          method: 'POST',
+          body: formData
+        });
 
-      // Create message text
-      const message =
-        `📄 *New DocuServe Order Request*
+        const result = await response.json();
 
-👤 Name: ${name}
-📧 Email: ${email}
-🛠 Service: ${service}
+        if (result.success) {
+          const adminEmail = "anujgupta26610812@gmail.com";
+          const whatsappNumber = "918779747746";
 
-📝 Instructions:
-${instructions}`;
+          const message = `📄 *New DocuServe Order Request*\n\n👤 Name: ${name}\n📧 Email: ${email}\n🛠 Service: ${service}\n\n📝 Instructions:\n${instructions}`;
 
-      // ---------- EMAIL LINK ----------
-      const subject = encodeURIComponent(`New Service Request from ${name}`);
-      const body = encodeURIComponent(message);
-      const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+          const subject = encodeURIComponent(`New Service Request from ${name}`);
+          const body = encodeURIComponent(message);
+          const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+          const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-      // ---------- WHATSAPP LINK ----------
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+          window.open(whatsappLink, "_blank");
+          window.location.href = mailtoLink;
 
-      // ✅ Open WhatsApp in new tab
-      window.open(whatsappLink, "_blank");
-
-      // ✅ Open Email App
-      window.location.href = mailtoLink;
-
-      // ✅ Reset form after action
-      this.reset();
-
+          this.reset();
+          alert('✅ Order saved to database!');
+        } else {
+          alert('❌ Error: ' + result.message);
+        }
+      } catch (error) {
+        alert('❌ Error submitting order: ' + error.message);
+      }
     });
   </script>
 
 
 </body>
-
 
 </html>
