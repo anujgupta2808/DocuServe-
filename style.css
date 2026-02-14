@@ -1310,5 +1310,6 @@ section {
 .services-overview .service-card.tier .service-icon {
   background: var(--white);
   color: var(--primary);
-  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-} */
+   /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+} 
+
