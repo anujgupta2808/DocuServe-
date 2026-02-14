@@ -4,191 +4,370 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>DocuServe | Smart Document Services</title>
+  <title>Pricing | DocuServe</title>
+  
   <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="container">
     <a href="index.html"><img src="docuserve-logo.svg" alt="DocuServe Logo" class="header-logo"></a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="order.html">Order</a>
-                <a href="pricing.html" class="active">Pricing</a>
-                <a href="contact.html">Contact</a>
-                
-            </nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" data-aos="fade-up">
   <div class="container">
-    <h2>Our Pricing Plans</h2>
-    <p>Clear and affordable pricing for PDF conversion and Excel data analysis.<br>
-Contact us for bulk or custom projects.</p>
+    <div class="hero-badge" data-aos="zoom-in" data-aos-delay="100">💰 Transparent Pricing</div>
+    <h1 data-aos="fade-up" data-aos-delay="200">Simple & <span class="gradient-text">Affordable Pricing</span></h1>
+    <p data-aos="fade-up" data-aos-delay="300">Clear pricing for PDF conversion and Excel data analysis. No hidden fees, pay only for what you need.</p>
   </div>
 </section>
 
-<!-- Promotions / Offers Section -->
-<section class="promotions" data-aos="fade-up">
+<!-- Promotions Section -->
+<section class="testimonials" data-aos="fade-up">
   <div class="container">
-    <div class="promo-banner">
-      <i class="fas fa-gift"></i><br><br>
-      <p style="position: relative; top: 10px;"><strong> Limited Offer:</strong> Enjoy 10% OFF on your first service.<br>
-Bulk files or large data projects? Reach out for special pricing.</p>
+    <div class="section-header">
+      <span class="section-badge">Special Offer</span>
+      <h2>Limited Time Discount</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card" data-aos="zoom-in">
+        <div class="stars">🎁</div>
+        <p><strong>First Order Discount:</strong> Get 10% OFF on your first service with us.</p>
+        <div class="author">
+          <strong>New Customer Offer</strong>
+          <span>Limited Time</span>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stars">📦</div>
+        <p><strong>Bulk Projects:</strong> Special pricing available for large volume conversions.</p>
+        <div class="author">
+          <strong>Volume Discount</strong>
+          <span>Contact for Quote</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Pricing Tiers -->
-<section class="pricing-tiers">
+<section class="services-overview" data-aos="fade-up">
   <div class="container">
-    <div class="tier" data-aos="fade-up">
-      <i class="fas fa-file-alt"></i>
-      <h3>Basic</h3>
-      <p>1-5 files / small documents</p>
-      <p>₹15 per page</p>
-      <p><strong>Estimated Duration:</strong> 1 working day</p>
-      <a href="order.html" class="btn">Order Now</a>
+    <div class="section-header">
+      <span class="section-badge">Pricing Plans</span>
+      <h2>Choose Your Plan</h2>
     </div>
+    <div class="services-grid">
+      <div class="service-card tier" data-aos="fade-up">
+        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Basic</h3>
+        <p>15-20 pages / small documents</p>
+        <p style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 16px 0;">₹40<span style="font-size: 1rem; font-weight: 400;">/page</span></p>
+        <p><strong>Duration:</strong> 1 working day</p>
+        <button class="btn primary" onclick="openOrderForm('Basic', '#2563eb')" style="margin-top: 20px; width: 100%;">Order Now</button>
+      </div>
 
-    <div class="tier" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-file-alt"></i>
-      <h3>Standard</h3>
-      <p>6–20 files / medium documents</p>
-      <p>₹12 per page</p>
-      <p><strong>Estimated Duration:</strong> 2-3 working days</p>
-      <a href="order.html" class="btn">Order Now</a>
-    </div>
+      <div class="service-card tier" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Standard</h3>
+        <p>21–50 pages / medium documents</p>
+        <p style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 16px 0;">₹35<span style="font-size: 1rem; font-weight: 400;">/page</span></p>
+        <p><strong>Duration:</strong> 2-3 working days</p>
+        <button class="btn primary" onclick="openOrderForm('Standard', '#2563eb')" style="margin-top: 20px; width: 100%;">Order Now</button>
+      </div>
 
-    <div class="tier bulk" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-hand-holding-usd"></i>
-      <h3>Bulk / Custom</h3>
-      <p>50+ pages or complex data requirements</p>
-      <p>Contact us for pricing</p>
-      <p><strong>Estimated Duration:</strong> As discussed</p>
-      <a href="order.html" class="btn">Order Now</a>
+      <div class="service-card tier" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>Bulk / Custom</h3>
+        <p>50+ pages or complex data</p>
+        <p style="font-size: 2rem; font-weight: 700; color: var(--primary); margin: 16px 0;">Custom</p>
+        <p><strong>Duration:</strong> As discussed</p>
+        <button class="btn primary" onclick="openOrderForm('Bulk/Custom', '#2563eb')" style="margin-top: 20px; width: 100%;">Contact Us</button>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Order Form Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content" id="modalContent">
+    <span class="close" onclick="closeOrderForm()">&times;</span>
+    <h2>Order <span id="planName"></span> Plan</h2>
+    <form id="pricingOrderForm" autocomplete="off">
+      <label>Name</label>
+      <input type="text" id="orderName" required autocomplete="off">
+      
+      <label>Email</label>
+      <input type="email" id="orderEmail" required autocomplete="off">
+      
+      <label>Phone</label>
+      <input type="tel" id="orderPhone" required autocomplete="off">
+      
+      <label>Service Type</label>
+      <select id="orderService" required>
+        <option value="">Select Service</option>
+        <option>PDF to Word</option>
+        <option>PDF to Excel</option>
+        <option>Excel Data Analysis</option>
+      </select>
+      
+      <label>Additional Details</label>
+      <textarea id="orderDetails" rows="4" placeholder="Number of pages, special requirements, etc."></textarea>
+      <label>Note: Please attach your file before sending the message via Email or WhatsApp.</label>
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 2% auto;
+  padding: 25px 35px;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideDown 0.4s;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: var(--dark);
+  font-size: 1.4rem;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -8px;
+  font-size: 14px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  padding: 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+.modal-content .btn {
+  margin-top: 5px;
+  padding: 11px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.modal-content .btn:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
+
+<script>
+function openOrderForm(plan, color) {
+  document.getElementById('orderModal').style.display = 'block';
+  document.getElementById('planName').textContent = plan;
+  document.getElementById('modalContent').style.borderTop = `5px solid ${color}`;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOrderForm() {
+  document.getElementById('orderModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('orderModal');
+  if (event.target == modal) {
+    closeOrderForm();
+  }
+}
+
+document.getElementById('pricingOrderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const plan = document.getElementById('planName').textContent;
+  const name = document.getElementById('orderName').value;
+  const email = document.getElementById('orderEmail').value;
+  const phone = document.getElementById('orderPhone').value;
+  const service = document.getElementById('orderService').value;
+  const details = document.getElementById('orderDetails').value;
+  
+  const adminEmail = "anujgupta26610812@gmail.com";
+  const whatsappNumber = "918779747746";
+  
+  const message = `📦 *New Order - ${plan} Plan*\\n\\n👤 Name: ${name}\\n📧 Email: ${email}\\n📱 Phone: ${phone}\\n🛠 Service: ${service}\\n\\n📝 Details:\\n${details}`;
+  
+  const subject = encodeURIComponent(`New ${plan} Plan Order from ${name}`);
+  const body = encodeURIComponent(message);
+  const mailtoLink = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  
+  window.open(whatsappLink, "_blank");
+  window.location.href = mailtoLink;
+  
+  this.reset();
+  closeOrderForm();
+  alert('✅ Order submitted! Check your email and WhatsApp.');
+});
+</script>
 
 <!-- FAQ Section -->
-<section class="faq" data-aos="fade-up">
+<section class="why-choose" data-aos="fade-up">
   <div class="container">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>How do I place an order?</h3>
-      <p>Simply go to the Order page, select your service (PDF to Word, PDF to Excel, or Excel data analysis), upload your file, and submit your request. We’ll contact you to confirm the details.</p>
+    <div class="section-header">
+      <span class="section-badge">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
     </div>
-    <div class="faq-item">
-      <h3>Can I request custom formatting?</h3>
-      <p>Yes! You can request structured tables, clean formatting, or specific layouts in Word or Excel based on your needs.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What if I need revisions?</h3>
-      <p>We offer minor revisions within 2 days after delivery to make sure the final file meets your expectations.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How is payment handled?</h3>
-      <p>Payments are accepted through secure online methods such as UPI. Pricing is transparent with no hidden charges.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Statistics / Counter Section
-<section class="stats" data-aos="fade-up">
-  <div class="container stats-flex">
-    <h2>Counter/Statistics</h2>
-    <div class="stat">
-      <i class="fas fa-book"></i>
-      <h3>5000+</h3>
-      <p>Pages Delivered</p>
-    </div>
-    <div class="stat">
-      <i class="fas fa-smile"></i>
-      <h3>2000+</h3>
-      <p>Happy Students</p>
-    </div>
-    <div class="stat">
-      <i class="fas fa-user-tie"></i>
-      <h3>50+</h3>
-      <p>Professional Writers</p>
+    <div class="why-grid">
+      <div class="why-card" data-aos="fade-up">
+        <div class="why-icon"><i class="fas fa-question"></i></div>
+        <h4>How do I place an order?</h4>
+        <p>Go to the Order page, select your service, and submit your request. We'll contact you to confirm details.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-icon"><i class="fas fa-edit"></i></div>
+        <h4>Can I request custom formatting?</h4>
+        <p>Yes! Request structured tables, clean formatting, or specific layouts based on your needs.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-icon"><i class="fas fa-redo"></i></div>
+        <h4>What if I need revisions?</h4>
+        <p>We offer revisions within 2 days after delivery to ensure the final file meets your expectations.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+        <h4>How is payment handled?</h4>
+        <p>Payments via UPI or secure online methods. Transparent pricing with no hidden charges.</p>
+      </div>
     </div>
   </div>
 </section>
-
-Secure Payment / Guarantee Section 
-<section class="guarantee" data-aos="fade-up">
-  <div class="container guarantee-flex">
-    <h2>Secure Payment</h2>
-    <div class="guarantee-item">
-      <i class="fas fa-shield-alt"></i>
-      <p>100% Secure Payments</p>
-    </div>
-    <div class="guarantee-item">
-      <i class="fas fa-thumbs-up"></i>
-      <p>Satisfaction Guaranteed</p>
-    </div>
-    <div class="guarantee-item">
-      <i class="fas fa-lock"></i>
-      <p>Data Privacy Ensured</p>
-    </div>
-  </div>
-</section> -->
-
 
 <!-- Footer -->
 <footer>
-  <div class="container footer-flex">
-   <p>&#169; 2026 DocuServe — All rights reserved.</p>
-    <!-- <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="writers.html">Writers</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>DocuServe</h3>
+        <p>Professional document conversion and data analysis services you can trust.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="order.html">PDF to Word</a>
+        <a href="order.html">PDF to Excel</a>
+        <a href="order.html">Data Analysis</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="mailto:anujgupta26610812@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+        <a href="tel:+918779747746"><i class="fas fa-phone"></i> Call Us</a>
+        <a href="https://wa.me/918779747746"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
     </div>
-  </div> -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 DocuServe. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
-<!-- ================= FLOATING SOCIAL BUTTONS ================= -->
-  <div class="social-floating">
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" class="float-btn insta-btn" title="Instagram"
-      style="background-color: #ba3a73;">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <!-- Call -->
-    <a href="tel:+918779747746" class="float-btn call-btn" title="Call Now" style="background-color: #25d366;">
-      <i class="fas fa-phone"></i>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/918779747746" target="_blank" class="float-btn" title="WhatsApp"
-      style="background-color:#25d366;">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-  </div>
-
+<!-- Floating Social -->
+<div class="social-floating">
+  <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" title="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="tel:+918779747746" title="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
+  <a href="https://wa.me/918779747746" target="_blank" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  AOS.init({ duration:1000, once:true });
+  AOS.init({ duration: 800, once: true, offset: 100 });
 </script>
-
 
 </body>
 </html>
-
