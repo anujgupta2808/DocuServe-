@@ -5,49 +5,14 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DocuServe | Smart Document Services</title>
+    <title>Order Service | DocuServe</title>
   <meta name="description" content="Request document conversion services - PDF to Word, PDF to Excel, and Excel data analysis with DocuServe." />
 
   <!-- Google Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-
-  <!-- External CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ✅ Premium Success Toast */
-    .toast {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 14px 18px;
-      border-radius: 12px;
-      color: #fff;
-      font-size: 14px;
-      font-family: Poppins;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: 0.4s ease;
-      z-index: 9999;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Button Loading Effect */
-    .order-btn.loading {
-      opacity: 0.7;
-      pointer-events: none;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -63,66 +28,82 @@
       </nav>
     </div>
   </header>
-  <section class="process-section">
+
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
     <div class="container">
-      <h2>How DocuServe Works</h2>
-      <p class="process-desc">
-        DocuServe uses a streamlined process to handle document conversion, formatting, and data analysis efficiently —
-        ensuring quality results with clear communication at every step..
-      </p>
+      <div class="hero-badge" data-aos="zoom-in" data-aos-delay="100">📝 Place Your Order</div>
+      <h1 data-aos="fade-up" data-aos-delay="200">Request <span class="gradient-text">Document Services</span></h1>
+      <p data-aos="fade-up" data-aos-delay="300">Fill out the form below and we'll get back to you with confirmation and timeline.</p>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">How It Works</span>
+        <h2>Simple Process</h2>
+        <p class="process-desc">
+          A streamlined workflow ensuring quality results with clear communication at every step.
+        </p>
+      </div>
 
       <div class="process-steps">
-        <div class="process-step">
-          <span class="step-number">1</span>
-          <h3>Submit Your Request
-          </h3>
-          <p>
-            Fill out the order form by selecting your required service and uploading your file with clear instructions.
-          </p>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-icon"><i class="fas fa-file-upload"></i></div>
+          <span class="step-number">01</span>
+          <h3>Submit Request</h3>
+          <p>Fill out the order form with your service requirements and instructions.</p>
         </div>
 
-        <div class="process-step">
-          <span class="step-number">2</span>
-          <h3>Order Confirmation</h3>
-          <p>
-            Once your request is received, our team reviews the details and confirms everything via email or WhatsApp.
-          </p>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <span class="step-number">02</span>
+          <h3>Confirmation</h3>
+          <p>We review and confirm everything via email or WhatsApp.</p>
         </div>
 
-        <div class="process-step">
-          <span class="step-number">3</span>
-          <h3>File Processing Begins</h3>
-          <p>Your document is handled by experienced professionals using accurate formatting and data-safe methods.</p>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-icon"><i class="fas fa-cogs"></i></div>
+          <span class="step-number">03</span>
+          <h3>Processing</h3>
+          <p>Your document is handled with accurate formatting and data-safe methods.</p>
         </div>
 
-        <div class="process-step">
-          <span class="step-number">4</span>
-          <h3>Quality Check & Review</h3>
-          <p>Before delivery, we carefully verify formatting, structure, and accuracy to ensure premium results.</p>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-icon"><i class="fas fa-check-double"></i></div>
+          <span class="step-number">04</span>
+          <h3>Quality Check</h3>
+          <p>We verify formatting, structure, and accuracy before delivery.</p>
         </div>
 
-        <div class="process-step">
-          <span class="step-number">5</span>
-          <h3>Fast & Secure Delivery</h3>
-          <p>Your completed file is delivered on time through Gmail or your preferred contact method.</p>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+          <div class="step-icon"><i class="fas fa-rocket"></i></div>
+          <span class="step-number">05</span>
+          <h3>Delivery</h3>
+          <p>Your completed file is delivered on time via email.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- form -->
-  <section class="order-section">
+  <!-- Order Form -->
+  <section class="order-section" data-aos="fade-up">
     <div class="container">
-      <h2>Request a Service</h2>
+      <div class="section-header">
+        <span class="section-badge">Order Form</span>
+        <h2>Request a Service</h2>
+      </div>
 
-      <form id="orderForm" class="order-form" enctype="multipart/form-data">
-
+      <form id="orderForm" class="order-form" autocomplete="off">
         <label>Name</label>
-        <input type="text" id="studentName" name="name" required>
+        <input type="text" id="studentName" name="name" placeholder="Full name" autocomplete="off" required>
 
         <label>Email</label>
-        <input type="email" id="studentEmail" name="email" required>
-
+        <input type="email" id="studentEmail" name="email" placeholder="Email address" autocomplete="off" required>
+        <label>Phone (Optional)</label>
+        <input type="tel" id="studentPhone" name="phone" placeholder="Phone number" autocomplete="off">
         <label>Service Type</label>
         <select id="subject" name="service" required>
           <option value="">Select Service</option>
@@ -130,52 +111,77 @@
           <option>PDF to Excel</option>
           <option>Excel Data Analysis</option>
         </select>
-        <br><br>
+
+        <label>Service Plane</label>
+        <select id="servicePlane" name="servicePlane" required>
+          <option value="">Service Plane</option>
+          <option>Basic</option>
+          <option>Standard</option>
+          <option>Bulk / Custom</option>
+        </select>
         <label>Instructions</label>
-        <textarea id="instructions" name="instructions" placeholder="Any special requirement"></textarea>
-        <label>Note: Please attach your file before sending the message via Email or WhatsApp.</label>
+        <textarea id="instructions" name="instructions" placeholder="Any special requirements" rows="4"></textarea>
+        
+        <p style="font-size: 0.9rem; color: black; margin-bottom: 16px;"><b>Note: Please attach your file before sending the message via Email or WhatsApp.</b></p>
+        
         <button class="order-btn" type="submit">
           <i class="fa-solid fa-paper-plane"></i> Submit Request
         </button>
-
       </form>
     </div>
   </section>
 
-  <!-- ================= FLOATING SOCIAL BUTTONS ================= -->
-  <div class="social-floating">
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" class="float-btn insta-btn" title="Instagram"
-      style="background-color: #ba3a73;">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <!-- Call -->
-    <a href="tel:+918779747746" class="float-btn call-btn" title="Call Now" style="background-color: #25d366;">
-      <i class="fas fa-phone"></i>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/918779747746" target="_blank" class="float-btn" title="WhatsApp"
-      style="background-color:#25d366;">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-  </div>
-
-
+  <!-- Footer -->
   <footer>
-    <div class="container footer-flex">
-      <p>&#169; 2026 DocuServe — All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>DocuServe</h3>
+          <p>Professional document conversion and data analysis services you can trust.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="order.html">PDF to Word</a>
+          <a href="order.html">PDF to Excel</a>
+          <a href="order.html">Data Analysis</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="mailto:anujgupta26610812@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+          <a href="tel:+918779747746"><i class="fas fa-phone"></i> Call Us</a>
+          <a href="https://wa.me/918779747746"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DocuServe. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- ✅ Success Toast -->
-  <div id="toast" class="toast"></div>
+  <!-- Floating Social -->
+  <div class="social-floating">
+    <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="tel:+918779747746" title="Call Now">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/918779747746" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
 
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+
     document.getElementById("orderForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -187,7 +193,7 @@
       const adminEmail = "anujgupta26610812@gmail.com";
       const whatsappNumber = "918779747746";
 
-      const message = `📄 *New DocuServe Order Request*\n\n👤 Name: ${name}\n📧 Email: ${email}\n🛠 Service: ${service}\n\n📝 Instructions:\n${instructions}`;
+      const message = `📄 *New DocuServe Order Request*\\n\\n👤 Name: ${name}\\n📧 Email: ${email}\\n🛠 Service: ${service}\\n\\n📝 Instructions:\\n${instructions}`;
 
       const subject = encodeURIComponent(`New Service Request from ${name}`);
       const body = encodeURIComponent(message);
@@ -202,7 +208,5 @@
     });
   </script>
 
-
 </body>
-
 </html>
