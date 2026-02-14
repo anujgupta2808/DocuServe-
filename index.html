@@ -5,14 +5,15 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>DocuServe | Smart Document Services</title>
+    <title>DocuServe | Professional Document Services</title>
     <meta name="description"
-        content="Get your handwritten notes typed, formatted, and delivered. Pay only after delivery — NoteEase." />
+        content="Professional PDF conversion and Excel data analysis services. Fast, secure, and accurate document processing." />
 
     <!-- Google Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
@@ -22,288 +23,360 @@
 
     <!-- Header -->
     <header>
-  <div class="container">
-    <a href="index.html"><img src="docuserve-logo.svg" alt="DocuServe Logo" class="header-logo"></a>
+        <div class="container">
+            <a href="index.html"><img src="docuserve-logo.svg" alt="DocuServe Logo" class="header-logo"></a>
             <nav>
                 <a href="index.html" class="active">Home</a>
                 <a href="order.html">Order</a>
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
-                
             </nav>
-  </div>
-</header>
+        </div>
+    </header>
 
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-aos="fade-up">
         <div class="container">
-            <h1>Get Your Notes Written by Experts — Stress Free</h1>
-            <p>Upload handwritten notes or bring them to us. We type, format, print and deliver — you pay only after
-                delivery.</p>
-            <a class="btn primary" href="order.html">Place Your Order <i class="fas fa-arrow-right"></i></a>
-            <a class="btn secondary" href="#how-it-works">How It Works</a>
-        </div>
-    </section>
-
-    <section class="process-section">
-        <div class="container">
-            <h2>How Our Services Work</h2>
-            <p class="process-desc">
-                We follow a simple and transparent process to ensure accurate document conversion and reliable data
-                analysis.
-            </p>
-
-            <div class="process-steps">
-                <div class="process-step">
-                    <span class="step-number">1</span>
-                    <h3>Place Your Request</h3>
-                    <p>
-                        Fill out the service request form by selecting PDF to Word, PDF to Excel, or Excel data
-                        analysis.
-                    </p>
+            <div class="hero-badge" data-aos="zoom-in" data-aos-delay="100">✨ New & Dedicated Service</div>
+            <h1 data-aos="fade-up" data-aos-delay="200">Transform Your Documents with <span class="gradient-text">Professional Care</span></h1>
+            <p data-aos="fade-up" data-aos-delay="300">Quality PDF conversion and Excel data analysis services. Affordable pricing, secure handling, and accurate results you can trust.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a class="btn primary" href="order.html">Get Started <i class="fas fa-arrow-right"></i></a>
+                <a class="btn secondary" href="#" id="learnMoreBtn">Learn More <i class="fas fa-play-circle"></i></a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item">
+                    <h3>Fast</h3>
+                    <p>Quick Turnaround</p>
                 </div>
-
-                <div class="process-step">
-                    <span class="step-number">2</span>
-                    <h3>We Contact You</h3>
-                    <p>After submitting your request, we contact you via email to confirm requirements and details.</p>
+                <div class="stat-item">
+                    <h3>Accurate</h3>
+                    <p>Quality Work</p>
                 </div>
-
-                <div class="process-step">
-                    <span class="step-number">3</span>
-                    <h3>Upload Required Files</h3>
-                    <p>
-                        Upload your PDF or Excel files securely for processing.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <span class="step-number">4</span>
-                    <h3>Processing by Expert</h3>
-                    <p>
-                       Your files are handled carefully to ensure proper formatting and accurate results.
-                    </p>
-                </div>
-
-                <div class="process-step">
-                    <span class="step-number">5</span>
-                    <h3>Files Delivered on Time</h3>
-                    <p>
-                       The completed files are delivered digitally within the confirmed timeframe.
-                    </p>
+                <div class="stat-item">
+                    <h3>Affordable</h3>
+                    <p>Fair Pricing</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Writer CTA -->
-    <section class="writer-cta">
+    <!-- Process Section -->
+    <section class="process-section" data-aos="fade-up">
         <div class="container">
-            <h2>What My Team Does?</h2>
+            <div class="section-header">
+                <span class="section-badge">Our Process</span>
+                <h2>How We Deliver Excellence</h2>
+                <p class="process-desc">
+                    A streamlined, transparent workflow designed for accuracy, speed, and client satisfaction.
+                </p>
+            </div>
 
-            <p>My team works on PDF to Word, PDF to Excel conversions and Excel data analysis projects, delivering
-                accurate and well-structured results for clients.</p>
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-icon"><i class="fas fa-file-upload"></i></div>
+                    <span class="step-number">01</span>
+                    <h3>Submit Request</h3>
+                    <p>Choose your service and provide project details through our secure form.</p>
+                </div>
 
-            <h2>Our Focus</h2>
-            <p>We ensure proper formatting, data accuracy and timely digital delivery for every project.
-            </p>
-            <!-- <a class="btn writer-btn" href="writers.html#apply">Apply Now</a> -->
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                    <span class="step-number">02</span>
+                    <h3>Confirmation</h3>
+                    <p>Receive instant confirmation and timeline via email or WhatsApp.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                    <span class="step-number">03</span>
+                    <h3>Expert Processing</h3>
+                    <p>Our specialists handle your files with precision and attention to detail.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-icon"><i class="fas fa-check-double"></i></div>
+                    <span class="step-number">04</span>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality checks ensure accuracy and proper formatting.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                    <span class="step-number">05</span>
+                    <h3>Fast Delivery</h3>
+                    <p>Receive your completed files securely within the agreed timeframe.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works">
+    <!-- Services Overview -->
+    <section class="services-overview" data-aos="fade-up">
         <div class="container">
-            <h2>How It Works</h2>
-            <p>Simple process — upload your file, choose a service, we convert or analyse your data, and receive your
-                completed files quickly.
-            </p>
-            <div class="steps">
-                <div class="step">
-                    <h1>📤</h1>
-                    <h3>Upload File</h3>
-                    <p>PDF or File securely through our order page.</p>
+            <div class="section-header">
+                <span class="section-badge">Our Expertise</span>
+                <h2>Professional Document Solutions</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-file-word"></i></div>
+                    <h3>PDF to Word</h3>
+                    <p>Precise conversion maintaining original formatting, tables, and structure.</p>
                 </div>
-                <div class="step">
-                    <h1>⚙️ <br></h1>
-                    <h3>Process & Convert</h3>
-                    <p>We convert PDF to Excel and Word.</p>
+                <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>PDF to Excel</h3>
+                    <p>Accurate data extraction with proper cell formatting and formulas.</p>
                 </div>
-                <div class="step">
-                    <h1>✅</h1>
-                    <h3> Quality Check</h3>
-                    <p>Files are reviewed to ensure proper formatting and structure.</p>
+                <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analysis</h3>
+                    <p>Expert Excel analysis with insights, charts, and actionable reports.</p>
                 </div>
-                <div class="step">
+            </div>
+        </div>
+    </section>
 
-                    <h1>📩</h1>
-                    <h3>Download Result</h3>
-                    <p>Receive your completed file digitally and ready to use.</p>
+    <!-- Our Commitment -->
+    <section class="testimonials" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Commitment</span>
+                <h2>What We Promise</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stars">💼</div>
+                    <p>We're a new service dedicated to providing quality document conversion with attention to every detail.</p>
+                    <div class="author">
+                        <strong>Professional Service</strong>
+                        <span>Quality Focused</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stars">⚡</div>
+                    <p>Fast response times and clear communication throughout your project. We value your time and trust.</p>
+                    <div class="author">
+                        <strong>Quick Turnaround</strong>
+                        <span>Reliable Delivery</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stars">💰</div>
+                    <p>Competitive pricing with no hidden fees. Pay only after you're satisfied with the quality of work.</p>
+                    <div class="author">
+                        <strong>Fair Pricing</strong>
+                        <span>Transparent Costs</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- WHY CHOOSE -->
-    <section class="why-choose">
+    <section class="why-choose" data-aos="fade-up">
         <div class="container">
-            <h2>Why Choose DocuServe?</h2>
-            <p>Trusted for accurate file conversion, fast processing and secure data handling.</p>
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>Your Reliable Document Partner</h2>
+                <p>A new service committed to quality, security, and customer satisfaction.</p>
+            </div>
 
             <div class="why-grid">
-                <div class="why-card"><i class="fas fa-file-alt"></i>
-                    <h4>Accurate Conversion</h4>
-                    <p>Your PDF tables, text and formatting are carefully preserved during conversion.</p>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Quality Focused</h4>
+                    <p>Careful attention to detail ensuring accurate document conversion.</p>
                 </div>
-                <div class="why-card"><i class="fas fa-clock"></i>
-                    <h4>Fast Processing</h4>
-                    <p>Quick turnaround so you get your Excel or Word files without delay.</p>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Fast Response</h4>
+                    <p>Quick turnaround times for your document processing needs.</p>
                 </div>
-                <div class="why-card"><i class="fas fa-lock"></i>
-                    <h4>Secure & Private</h4>
-                    <p>Your documents remain confidential and are handled safely.</p>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Secure Handling</h4>
+                    <p>Your documents are handled with strict confidentiality.</p>
                 </div>
-                <div class="why-card"><i class="fas fa-dollar-sign"></i>
-                    <h4>Transparent Pricing</h4>
-                    <p>Simple pricing with no hidden charges — pay only for the service you choose.</p>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h4>Customer First</h4>
+                    <p>Revisions available to ensure you're satisfied with the results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OUR PROMISE -->
-    <section class="our-promise">
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="zoom-in">
         <div class="container">
-            <h2>Our Promise</h2>
-            <div class="promise-cards">
-
-                <!-- <div class="promise-card"><i class="fas fa-check-circle"></i>
-                    <h4>Accurate Results</h4>
-                    <p>We ensure precise conversion and analysis with correct formatting.</p>
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Let us help you with professional document conversion services at affordable rates.</p>
+                <div class="cta-buttons">
+                    <a href="order.html" class="btn primary large">Place Your Order <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn secondary large">Contact Us <i class="fas fa-envelope"></i></a>
                 </div>
-                <div class="promise-card"><i class="fas fa-cloud-download-alt"></i>
-                    <h4>Digital Delivery</h4>
-                    <p>Receive your processed files securely online — no physical handling.</p>
-                </div>
-                <div class="promise-card"><i class="fas fa-credit-card"></i>
-                    <h4>Pay After Confirmation</h4>
-                    <p>Payment only after you review and approve the final output.</p>
-                </div>
-                <div class="promise-card"><i class="fas fa-user-shield"></i>
-                    <h4>Data Confidentiality</h4>
-                    <p>Your documents and data remain private and fully protected.</p>
-                </div> -->
-                <!--  -->
-                <div class="promise-card"><i class="fas fa-bolt"></i>
-                    <h4>Instant Delivery</h4>
-                    <p>Fast, secure digital file transfer.</p>
-                </div>
-                <div class="promise-card"><i class="fas fa-shield-alt"></i>
-                    <h4>Data Security</h4>
-                    <p>Your files are safe with us.</p>
-                </div>
-                <div class="promise-card"><i class="fas fa-credit-card"></i>
-                    <h4>Risk-Free Payment</h4>
-                    <p>Approve first, then pay.</p>
-                </div>
-                <div class="promise-card"><i class="fas fa-user-secret"></i>
-                    <h4>100% Privacy</h4>
-                    <p>Your data stays confidential.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- CONTACT -->
-    <section id="contact">
+    <!-- Feedback Section -->
+     <br><br><br>
+    <section id="contact" class="contact" data-aos="fade-up">
         <div class="container">
-            <h2>Share Your Experience</h2>
-            <p>Your feedback helps us improve our PDF conversion and Excel analysis services. Let us know how we did or what we can improve..</p>
-            <!-- <div class="contact-card"> -->
-                
-
-<div class="contact-card" data-aos="fade-left">
-        <h3>Send Us a Message</h3>
-        
+            <div class="section-header">
+                <span class="section-badge">Feedback</span>
+                <h2>Share Your Experience</h2>
+                <p style="color: gray;">Your feedback helps us improve our PDF conversion and Excel analysis services. Let us know how we did or what we can improve.</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Send Us a Message</h3>
                 <form id="contactForm" autocomplete="off">
-          <input type="text" id="contactName" name="Name" placeholder="Full Name" autocomplete="off" required>
-          <input type="tel" id="contactPhone" name="phone" placeholder="Contact Number" autocomplete="off" required >
-          <input type="email" id="contactEmail" name="email" placeholder="Email Address" autocomplete="off" required >
-          <textarea id="requestMessage" name="message" rows="4"
-                        placeholder="Your Message…"></textarea>
+                    <input type="text" id="contactName" name="Name" placeholder="Full Name" autocomplete="off" required>
+                    <input type="tel" id="contactPhone" name="phone" placeholder="Contact Number" autocomplete="off" required>
+                    <input type="email" id="contactEmail" name="email" placeholder="Email Address" autocomplete="off" required>
+                    <textarea id="requestMessage" name="message" rows="4" placeholder="Your Message…" required></textarea>
                     <button type="submit">Send Feedback</button>
                 </form>
-
-
-        <p id="contactFormConfirm" class="success-msg" style="display:none;">
-          ✅ Message sent successfully!
-        </p>
-
-
-                <!-- <form id="requestForm">
-                    <input type="text" id="requestName" name="name" placeholder="Full Name" required />
-                    <input type="tel" id="requestPhone" name="phone" placeholder="Contact Number" required />
-                    <input type="email" id="requestEmail" name="email" placeholder="Email Address" required />
-                    <input type="text" id="requestAddress" name="address" placeholder="Organization / Location" required />
-                    <textarea id="requestMessage" name="message" rows="4"
-                        placeholder="Your Message…"></textarea>
-                    <button type="submit">Send Feedback</button>
-                </form>
-                <p id="requestFormConfirm" class="success-msg" style="display:none;">Request submitted successfully!</p>
-
-            </div> -->
+                <p id="contactFormConfirm" class="success-msg" style="display:none;">
+                    ✅ Message sent successfully!
+                </p>
+            </div>
         </div>
     </section>
 
-
-
-    <!-- FOOTER -->
+    <!-- Footer -->
+     <br><br><br>
     <footer>
-        <div class="container footer-flex">
-            <p>&#169; 2026 DocuServe — All rights reserved.</p>
-            <!-- <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
-            </div> -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>DocuServe</h3>
+                    <p>Professional document conversion and data analysis services you can trust.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="order.html">PDF to Word</a>
+                    <a href="order.html">PDF to Excel</a>
+                    <a href="order.html">Data Analysis</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="mailto:anujgupta26610812@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="tel:+918779747746"><i class="fas fa-phone"></i> Call Us</a>
+                    <a href="https://wa.me/918779747746"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DocuServe. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-   <!-- ================= FLOATING SOCIAL BUTTONS ================= -->
-  <div class="social-floating">
+    <!-- Floating Social -->
+    <div class="social-floating">
+        <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:+918779747746" title="Call Now">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/918779747746" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/DocuServeOfficial" target="_blank" class="float-btn insta-btn" title="Instagram"
-      style="background-color: #ba3a73;">
-      <i class="fab fa-instagram"></i>
-    </a>
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>About DocuServe</h2>
+                <p>Your Trusted Document Partner</p>
+            </div>
+            <div class="modal-body">
+                <div class="about-section">
+                    <h3><i class="fas fa-info-circle"></i> Who We Are</h3>
+                    <p>DocuServe is a dedicated document services provider specializing in PDF conversions and Excel data analysis. We understand the importance of accurate document processing in today's digital world.</p>
+                    <p>Our mission is to deliver high-quality document conversion services with attention to detail, fast turnaround times, and competitive pricing.</p>
+                </div>
+                <div class="about-section">
+                    <h3><i class="fas fa-star"></i> Our Values</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Quality First</h4>
+                            <p>Meticulous attention to detail and accuracy.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Data Security</h4>
+                            <p>Strict confidentiality and secure handling.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Timely Delivery</h4>
+                            <p>Fast turnaround without compromising quality.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Customer Satisfaction</h4>
+                            <p>Revisions and support included.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-section">
+                    <h3><i class="fas fa-briefcase"></i> Our Services</h3>
+                    <ul class="services-list">
+                        <li><i class="fas fa-file-word"></i> PDF to Word - Editable documents with preserved formatting</li>
+                        <li><i class="fas fa-file-excel"></i> PDF to Excel - Organized data extraction with formulas</li>
+                        <li><i class="fas fa-chart-line"></i> Data Analysis - Professional insights and reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Call -->
-    <a href="tel:+918779747746" class="float-btn call-btn" title="Call Now" style="background-color: #25d366;">
-      <i class="fas fa-phone"></i>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/918779747746" target="_blank" class="float-btn" title="WhatsApp"
-      style="background-color:#25d366;">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-  </div>
-
-
-    <!-- BACK TO TOP -->
-    <!-- <button id="backToTop" aria-label="Back to top">↑</button> -->
-
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
     <script src="form-handler.js" defer></script>
+    <script>
+        // About Modal
+        const modal = document.getElementById('aboutModal');
+        const btn = document.getElementById('learnMoreBtn');
+        const span = document.getElementsByClassName('close-modal')[0];
 
+        btn.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
-
 </html>
-
-
